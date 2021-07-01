@@ -1,0 +1,15 @@
+<h1>
+    {{ question.question_text }}
+</h1>
+<ul>
+    {% for choice in question.choice_set.all %}
+        <li>
+            {{ choice.choice_text }} -- {{ choice.votes }} vote{{ choice.votes|pluralize }}
+            <!--   pluralize : choice.votes가 1이 아닐 경우 's' 반환 후 votes로 출력         -->
+        </li>
+    {% endfor %}
+</ul>
+
+<a href="{% url 'polls:detail' question.id %}">
+    Vote Again?
+</a>
