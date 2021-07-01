@@ -1,4 +1,4 @@
-# django 튜토리얼
+# django 튜토리얼 - 첫 번째 장고 앱 작성하기
 
 
 ### View 다루기 - HttpResponse 객체
